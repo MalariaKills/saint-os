@@ -1,4 +1,4 @@
-# justin-os &nbsp; [![build](https://github.com/zoro11031/justin-os/actions/workflows/build.yml/badge.svg)](https://github.com/zoro11031/justin-os/actions/workflows/build.yml)
+# saint-os &nbsp; [![build](https://github.com/MalariaKills/saint-os/actions/workflows/build.yml/badge.svg)](https://github.com/MalariaKills/saint-os/actions/workflows/build.yml)
 
 Fedora Atomic images tuned for daily development, built on Universal Blue with a lean host and a polished zsh experience.
 
@@ -8,8 +8,8 @@ Fedora Atomic images tuned for daily development, built on Universal Blue with a
 
 | Image | Desktop | Highlights |
 | --- | --- | --- |
-| `justin-os` | KDE Plasma (Kinoite) | `/bin/sh` → `dash`, zsh for users, curated CLI tools |
-| `justin-os-surface` | GNOME (Silverblue + linux-surface) | Touch/stylus extras, Surface-tailored Flatpaks, Microsoft Core Fonts |
+| `saint-os` | KDE Plasma (Kinoite) | `/bin/sh` → `dash`, zsh for users, curated CLI tools |
+| `saint-os-surface` | GNOME (Silverblue + linux-surface) | Touch/stylus extras, Surface-tailored Flatpaks, Microsoft Core Fonts |
 
 ---
 
@@ -19,13 +19,13 @@ Fedora Atomic images tuned for daily development, built on Universal Blue with a
 2. Rebase, reboot, then move to the signed image:
 
    ```bash
-   rpm-ostree rebase ostree-unverified-registry:ghcr.io/zoro11031/justin-os:latest
+   rpm-ostree rebase ostree-unverified-registry:ghcr.io/MalariaKills/saint-os:latest
    systemctl reboot
-   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/zoro11031/justin-os:latest
+   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/MalariaKills/saint-os:latest
    systemctl reboot
    ```
 
-   Use `justin-os-surface` in place of `justin-os` for Surface hardware.
+   Use `saint-os-surface` in place of `saint-os` for Surface hardware.
 
 3. Confirm the deployment with `rpm-ostree status`.
 

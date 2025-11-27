@@ -7,18 +7,18 @@ modules:
           # Productivity
           - com.bitwarden.desktop
           - net.cozic.joplin_desktop
-          - net.ankiweb.Anki
           - com.nextcloud.desktopclient.nextcloud
-          
+
           # Browsers
           - com.brave.Browser
-          - com.google.Chrome
           - org.mozilla.firefox
-          
+
           # Communication
           - com.discordapp.Discord
-          - us.zoom.Zoom
-          
+
+          # File Sharing
+          # Note: nicotine-plus has no reliable flatpak - installed as system package
+
           # Media
           - com.github.iwalton3.jellyfin-media-player
           - com.plexamp.Plexamp
@@ -27,10 +27,13 @@ modules:
           - org.videolan.VLC
           - org.kde.haruna
           - org.kde.elisa
-          
+
           # Gaming
           - com.valvesoftware.Steam
           - com.vysp3r.ProtonPlus
+
+          # Graphics/Image Editing
+          - org.gimp.GIMP
           
           # Office
           - org.libreoffice.LibreOffice
@@ -48,6 +51,10 @@ modules:
           - org.kde.okular
           - org.kde.skanpage
           
+          # Remote Desktop & VPN
+          - com.parsecgaming.parsec # Remote desktop for gaming and work
+          - com.github.rustdesk.rustdesk # Open-source remote desktop
+
           # Utilities
           - com.github.marhkb.Pods
           - com.github.tchx84.Flatseal

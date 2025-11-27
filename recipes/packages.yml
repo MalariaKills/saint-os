@@ -6,14 +6,14 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-%OS_VERSION%/scottames-ghostty-fedora-%OS_VERSION%.repo
-      - vscode.repo # stage local repo definition from files/rpm-ostree/vscode.repo
     install:
       # Shell & Terminal
       - bat # Syntax highlighting for cat
       - btop
       - dialog
       - fastfetch
-      - zsh
+      - fish
+      - starship # Cross-shell prompt
       - dash # POSIX-compliant system shell that is up to 4x faster than bash
       - stow
       - yad
@@ -21,8 +21,12 @@ modules:
       - fzf # Fuzzy finder
       - zoxide # Smarter cd command with frecency-based directory jumping
       - ghostty # Terminal emulator with enhanced features written in zig
-      - git-delta # Enhanced git diff viewer with syntax highlighting
+      - wezterm # Terminal emulator (configured with Fish, Monaspace fonts)
       - tealdeer # Fast tldr client for simplified command examples
+      - ripgrep # Fast grep replacement
+      - fd-find # Better find command
+      - eza # Better ls with colors and icons
+      - tmux # Terminal multiplexer
 
       # Fonts
       - jetbrains-mono-fonts-all # JetBrains Mono with Nerd Font symbols
@@ -30,8 +34,23 @@ modules:
       - google-noto-sans-fonts # Universal font coverage
       - google-noto-emoji-fonts # Emoji support
 
-      # GUI
+      # GUI Applications
       - gnome-disk-utility
+
+      # P2P File Sharing
+      - nicotine+ # Soulseek client - no reliable flatpak available
+
+      # KDE Applications
+      # Note: Some KDE apps are also available as flatpaks in common-flatpaks.yml
+      - dolphin # KDE file manager
+      - konsole # KDE terminal (alternative to ghostty)
+      - spectacle # KDE screenshot tool
+      - kate # KDE text editor
+      - kwallet # KDE credential storage
+      - kwalletmanager # KDE wallet GUI manager
+
+      # Keyring/Secret Management
+      - libsecret # Provides org.freedesktop.secrets API for apps like VSCode
 
       # System utilities
       - lm_sensors # Hardware monitoring
@@ -39,11 +58,15 @@ modules:
       - rsync # File synchronization
       - tree # Directory tree viewer
       - unzip # Archive extraction
+      - zip # Archive creation
       - curl # HTTP client
       - wget # File downloader
       - jq # JSON processor
-      - code # Visual Studio Code
+      - yq-go # YAML processor (Go implementation)
+
+      # VPN
       - tailscale # Zero-config VPN
+      - mullvad-vpn # Privacy-focused VPN client
 
   # Virtualization
   - type: rpm-ostree

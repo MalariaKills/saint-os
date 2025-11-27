@@ -7,6 +7,13 @@ modules:
       - xorg-x11-font-utils # Required by msttcore-fonts-installer
       - fontconfig
 
+  # Additional fonts for WezTerm
+  # Note: monaspace fonts are used in WezTerm config
+  - type: rpm-ostree
+    install:
+      - monaspace-fonts # Monaspace Xenon used in WezTerm
+      # Note: jetbrains-mono and noto-emoji are already in packages.yml
+
   # Configure shells and install fonts (BEFORE changing /bin/sh)
   - type: script
     scripts:
