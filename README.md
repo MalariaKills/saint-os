@@ -15,10 +15,12 @@ Fedora Atomic images tuned for daily development, built on Universal Blue with a
 ## Quick Start
 
 1. Begin from any Fedora Atomic base (Silverblue/Kinoite/uBlue).
-2. Rebase and reboot:
+2. Rebase, reboot, then move to the signed image:
 
    ```bash
    rpm-ostree rebase ostree-unverified-registry:ghcr.io/MalariaKills/saint-os:latest
+   systemctl reboot
+   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/MalariaKills/saint-os:latest
    systemctl reboot
    ```
 
