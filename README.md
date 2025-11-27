@@ -9,23 +9,18 @@ Fedora Atomic images tuned for daily development, built on Universal Blue with a
 | Image | Desktop | Highlights |
 | --- | --- | --- |
 | `saint-os` | KDE Plasma (Kinoite) | `/bin/sh` → `dash`, zsh for users, curated CLI tools |
-| `saint-os-surface` | GNOME (Silverblue + linux-surface) | Touch/stylus extras, Surface-tailored Flatpaks, Microsoft Core Fonts |
 
 ---
 
 ## Quick Start
 
 1. Begin from any Fedora Atomic base (Silverblue/Kinoite/uBlue).
-2. Rebase, reboot, then move to the signed image:
+2. Rebase and reboot:
 
    ```bash
    rpm-ostree rebase ostree-unverified-registry:ghcr.io/MalariaKills/saint-os:latest
    systemctl reboot
-   rpm-ostree rebase ostree-image-signed:docker://ghcr.io/MalariaKills/saint-os:latest
-   systemctl reboot
    ```
-
-   Use `saint-os-surface` in place of `saint-os` for Surface hardware.
 
 3. Confirm the deployment with `rpm-ostree status`.
 
@@ -43,15 +38,6 @@ If Flatpaks aren't installed when you first boot, you can force install all the 
 ```bash
 bluebuild-flatpak-manager apply all
 ```
-
----
-
-## Surface Extras
-
-The Surface variant layers:
-
-- linux-surface kernel and firmware helpers (`iptsd`, `libwacom-surface`, `thermald`)
-- Touch/stylus-friendly Flatpaks (Loupe, Weather, Xournal++, Krita, etc.)
 
 ---
 
