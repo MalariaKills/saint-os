@@ -6,6 +6,9 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-%OS_VERSION%/scottames-ghostty-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/atim/wezterm/repo/fedora-%OS_VERSION%/atim-wezterm-fedora-%OS_VERSION%.repo
+      - https://repository.mullvad.net/rpm/stable/mullvad.repo
     install:
       # Shell & Terminal
       - bat # Syntax highlighting for cat
@@ -25,7 +28,6 @@ modules:
       - tealdeer # Fast tldr client for simplified command examples
       - ripgrep # Fast grep replacement
       - fd-find # Better find command
-      - eza # Better ls with colors and icons
       - tmux # Terminal multiplexer
 
       # Fonts
@@ -62,7 +64,7 @@ modules:
       - curl # HTTP client
       - wget # File downloader
       - jq # JSON processor
-      - yq-go # YAML processor (Go implementation)
+      - yq # YAML processor
 
       # VPN
       - tailscale # Zero-config VPN
