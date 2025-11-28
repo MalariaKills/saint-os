@@ -7,12 +7,8 @@ modules:
       - xorg-x11-font-utils # Required by msttcore-fonts-installer
       - fontconfig
 
-  # Additional fonts for WezTerm
-  # Note: monaspace fonts are used in WezTerm config
-  - type: rpm-ostree
-    install:
-      - monaspace-fonts # Monaspace Xenon used in WezTerm
-      # Note: jetbrains-mono and noto-emoji are already in packages.yml
+  # Note: monaspace-fonts not available in Fedora 43
+  # Download manually from https://github.com/githubnext/monaspace if needed
 
   # Configure shells and install fonts (BEFORE changing /bin/sh)
   - type: script
