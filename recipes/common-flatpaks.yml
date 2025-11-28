@@ -53,7 +53,7 @@ modules:
           
           # Remote Desktop & VPN
           - com.parsecgaming.parsec # Remote desktop for gaming and work
-          - com.github.rustdesk.rustdesk # Open-source remote desktop
+          # Note: RustDesk not available on Flathub - install from https://rustdesk.com/
 
           # Utilities
           - com.github.marhkb.Pods

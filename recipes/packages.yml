@@ -70,6 +70,9 @@ modules:
       - tailscale # Zero-config VPN
       - mullvad-vpn # Privacy-focused VPN client
 
+      # Remote Desktop
+      - rustdesk # Open-source remote desktop
+
   # Virtualization
   - type: rpm-ostree
     install:
