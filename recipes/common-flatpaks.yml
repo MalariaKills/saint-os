@@ -37,7 +37,7 @@ modules:
           
           # Office
           - org.libreoffice.LibreOffice
-          - org.onlyoffice.desktopeditors
+          # Note: OnlyOffice not available on Flathub - use LibreOffice instead
           
           # KDE Apps
           - org.kde.gwenview
