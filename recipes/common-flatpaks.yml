@@ -58,6 +58,6 @@ modules:
           # Utilities
           - com.github.marhkb.Pods
           - com.github.tchx84.Flatseal
-          - io.github.dvlv.boxbuddyrs
           - it.mijorus.gearlever
           - org.gnome.Calculator
+          # Note: BoxBuddy not available on Flathub
