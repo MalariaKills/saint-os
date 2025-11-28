@@ -49,7 +49,7 @@ modules:
       - spectacle # KDE screenshot tool
       - kate # KDE text editor
       - kwallet # KDE credential storage
-      - kwalletmanager # KDE wallet GUI manager
+      - kwalletmanager5 # KDE wallet GUI manager (KF5 version)
 
       # Keyring/Secret Management
       - libsecret # Provides org.freedesktop.secrets API for apps like VSCode
